@@ -1,0 +1,45 @@
+question,context,ground_truth
+Compare and contrast Retrieval Augmented Generation (RAG) with the enhanced RAG framework proposed in the paper. How does the novel approach address the 'semantic gap' between Large Language Models (LLMs) and retrievers?,"R2AG: Incorporating Retrieval Information into Retrieval Augmented
+Generation
+Fuda Ye1, Shuangyin Li1,*, Yongqi Zhang2, Lei Chen2,3
+1School of Computer Science, South China Normal University","The enhanced RAG framework proposed in the paper, R^2AG, addresses the 'semantic gap' between Large Language Models (LLMs) and retrievers by incorporating retrieval information into the generation process. Specifically, it utilizes nuanced features from the retrievers and employs a R^2-Former to capture retrieval information, which is then integrated into LLMs' generation using a retrieval-aware prompting strategy. This approach fills the semantic gap by providing an anchor for LLMs to aid in the generation process, making it more effective, robust, and efficient."
+How does the proposed method in 'R^2AG' differ from traditional Retrieval Augmented Generation (RAG) methods?,"Generation
+Fuda Ye1, Shuangyin Li1,*, Yongqi Zhang2, Lei Chen2,3
+1School of Computer Science, South China Normal University
+2The Hong Kong University of Science and Technology (Guangzhou)
+3The Hong Kong University of Science and Technology","The proposed method in 'R^2AG' differs from traditional Retrieval Augmented Generation (RAG) methods by incorporating retrieval information into the generation process, thereby filling the semantic gap between large language models and retrievers. This is achieved through the use of a R^2-Former to capture retrieval information and a retrieval-aware prompting strategy to integrate this information into the LLM's generation."
+Which email address corresponds to Yongqi Zhang?,"2The Hong Kong University of Science and Technology (Guangzhou)
+3The Hong Kong University of Science and Technology
+fudayip@m.scnu.edu.cn, shuangyinli@scnu.edu.cn, yongqizhang@hkust-gz.edu.cn, leichen@cse.ust.hk
+Abstract",yongqizhang@hkust-gz.edu.cn
+"Compare and contrast Retrieval Augmented Generation (RAG) with R^2AG. In your answer, specifically mention how R^2AG addresses the 'semantic gap' between LLMs and retrievers that exists in traditional RAG approaches.","3The Hong Kong University of Science and Technology
+fudayip@m.scnu.edu.cn, shuangyinli@scnu.edu.cn, yongqizhang@hkust-gz.edu.cn, leichen@cse.ust.hk
+Abstract
+Retrieval augmented generation (RAG) has
+been applied in many scenarios to augment","R^2AG addresses the 'semantic gap' between LLMs and retrievers by incorporating retrieval information into Retrieval Augmented Generation. Specifically, R^2AG utilizes the nuanced features from the retrievers and employs a R^2-Former to capture retrieval information. Then, a retrieval-aware prompting strategy is designed to integrate retrieval information into LLMs' generation, thereby filling the semantic gap."
+Compare the proposed method R^2AG with traditional Retrieval Augmented Generation (RAG) methods. What specific improvements does it bring?,"fudayip@m.scnu.edu.cn, shuangyinli@scnu.edu.cn, yongqizhang@hkust-gz.edu.cn, leichen@cse.ust.hk
+Abstract
+Retrieval augmented generation (RAG) has
+been applied in many scenarios to augment
+large language models (LLMs) with external","R^2AG improves upon traditional RAG methods by incorporating retrieval information into the generation process, which helps to fill the semantic gap between large language models (LLMs) and retrievers. Specifically, it utilizes nuanced features from the retrievers and employs a R^2-Former to capture retrieval information, making it more effective in low-source scenarios where LLMs and retrievers are frozen."
+What is the primary goal of the proposed method R^2AG?,"Abstract
+Retrieval augmented generation (RAG) has
+been applied in many scenarios to augment
+large language models (LLMs) with external
+documents provided by retrievers. However,
+a semantic gap exists between LLMs and","The primary goal of R^2AG is to fill the semantic gap between large language models (LLMs) and retrievers by incorporating retrieval information into the generation process, thereby improving the effectiveness, robustness, and efficiency of the augmented generation."
+What is the primary reason for the incomprehension in the generation process of Retrieval Augmented Generation (RAG)?,"been applied in many scenarios to augment
+large language models (LLMs) with external
+documents provided by retrievers. However,
+a semantic gap exists between LLMs and
+retrievers due to differences in their training","The primary reason for incomprehension in the generation process of Retrieval Augmented Generation (RAG) is due to a semantic gap between LLMs and retrievers, caused by differences in their training objectives and architectures."
+What is the primary issue addressed by the proposed R$^2$AG framework?,"large language models (LLMs) with external
+documents provided by retrievers. However,
+a semantic gap exists between LLMs and
+retrievers due to differences in their training
+objectives and architectures. This misalign-",The primary issue addressed by the proposed R$^2$AG framework is the semantic gap between large language models (LLMs) and retrievers due to differences in their training objectives and architectures.
+How does the paper 'R^2AG: Incorporating Retrieval Information into Retrieval Augmented Generation' propose to fill the semantic gap between LLMs and retrievers?,"documents provided by retrievers. However,
+a semantic gap exists between LLMs and
+retrievers due to differences in their training
+objectives and architectures. This misalign-
+ment forces LLMs to passively accept the","R^2AG proposes to fill the semantic gap between LLMs and retrievers by incorporating retrieval information into Retrieval Augmented Generation. Specifically, it utilizes nuanced features from the retrievers and employs a R^2-Former to capture retrieval information, then integrates this information into LLMs' generation using a retrieval-aware prompting strategy."
