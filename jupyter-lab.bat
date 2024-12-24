@@ -1,0 +1,1 @@
+C:\Users\shat_\AppData\Roaming\Python\Python310\Scripts\jupyter-lab.exe --ip=10.10.8.162
