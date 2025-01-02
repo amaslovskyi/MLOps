@@ -15,7 +15,7 @@ load_dotenv()
 @cl.on_chat_start
 def math_chatbot():
     # llm = OpenAI(model="gpt-3.5-turbo-instruct", temperature=0)
-    llm = OllamaLLM(model="llama3.2-vision", temperature=0)
+    llm = OllamaLLM(model="mistral-nemo", temperature=0)
 
     word_problem_template = """You are a reasoning agent tasked with solving the user's logic-based questions.
     Logically arrive at the solution, and be factual. In your answers, clearly detail the steps involved and give
