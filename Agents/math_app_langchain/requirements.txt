@@ -1,0 +1,11 @@
+langchain-groq
+langchain
+langchain_community
+langchain_ollama
+langchain-openai
+chainlit
+nbconvert
+python-dotenv
+numexpr
+wikipedia
+pydantic==2.10.1
