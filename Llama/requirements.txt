@@ -1,0 +1,7 @@
+together
+utils
+PyYAML
+jinja2
+tiktoken
+pydantic>=2
+Pillow
