@@ -1,10 +1,11 @@
 # Airflow configuration
 airflow:
   executor: CeleryExecutor
-  fernetKey:   # Generate this with: python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
+  fernetKey:
     secretName: airflow-fernet-key
     secretKey: fernet-key  
   config:
+      # dag configs
     AIRFLOW__CORE__LOAD_EXAMPLES: "True"
     AIRFLOW__WEBSERVER__WEB_SERVER_PORT: "8080"
 
@@ -30,18 +31,6 @@ dags:
     accessMode: ReadWriteMany
     # storageClass: "" # Specify your storage class here if needed
 
-configMaps:
-extraVolumeMounts:
-  - name: dags
-    mountPath: /opt/airflow/dags
-    readOnly: true
-
-extraVolumes:
-  - name: dags
-    configMap:
-      name: airflow-dags
-
-
 # Web server configuration
 web:
   replicas: 1
@@ -51,11 +40,23 @@ web:
       - port: 8080
         targetPort: 8080
   webserverSecretKeySecretName: airflow-webserver-secret
+  extraVolumeMounts:
+    - name: dags
+      mountPath: /opt/airflow/dags
+      readOnly: false
 
 # Scheduler configuration
 scheduler:
   replicas: 1
+  extraVolumeMounts:
+    - name: dags
+      mountPath: /opt/airflow/dags
+      readOnly: true
 
 # Worker configuration
 workers:
   replicas: 1
+  extraVolumeMounts:
+    - name: dags
+      mountPath: /opt/airflow/dags
+      readOnly: false

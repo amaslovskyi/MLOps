@@ -6,6 +6,12 @@
 helm install airflow apache-airflow/airflow -f custom-values.yaml --namespace airflow --create-namespace
 ```
 
+### Upgrade helm
+
+```bash
+helm upgrade airflow apache-airflow/airflow -f custom-values.yaml --namespace airflow
+```
+
 ### Generate k8s secret
 
 ```bash
