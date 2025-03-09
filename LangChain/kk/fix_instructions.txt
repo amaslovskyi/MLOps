@@ -1,0 +1,49 @@
+# How to Fix the ValueError in l_17_agents.ipynb
+
+The error message you're seeing:
+```
+ValueError: Message dict must contain 'role' and 'content' keys, got {'type': 'reference', 'reference_ids': [0]}
+```
+
+## The Problem
+
+This error occurs because you're using string placeholders ("placeholder") in your prompt template, but LangChain expects proper `MessagesPlaceholder` objects for variables that will contain multiple messages (like chat history).
+
+## How to Fix It
+
+1. Open your notebook `l_17_agents.ipynb`
+2. Find the cell where you define the prompt template (around line 95)
+3. Replace this code:
+
+```python
+prompt = ChatPromptTemplate.from_messages(
+    [
+        ("system", "You are a helpful assistant. Think step by step before responding."),
+        ("placeholder", "{chat_history}"), 
+        ("human", "{input}"),
+        ("placeholder", "{agent_scratchpad}")
+    ]
+)
+```
+
+4. With this corrected code:
+
+```python
+prompt = ChatPromptTemplate.from_messages(
+    [
+        ("system", "You are a helpful assistant. Think step by step before responding."),
+        MessagesPlaceholder(variable_name="chat_history"), 
+        ("human", "{input}"),
+        MessagesPlaceholder(variable_name="agent_scratchpad")
+    ]
+)
+```
+
+5. Also check for any typos in your code, such as in the lambda function:
+   - Change `lambda sesion_id: message_history` to `lambda session_id: message_history` if needed
+
+## Why This Works
+
+The `MessagesPlaceholder` class is specifically designed to handle collections of messages (like chat history) in the correct format that LangChain expects. Using string placeholders doesn't properly format these collections, leading to the error you're seeing.
+
+After making these changes, your agent should work correctly without the ValueError. 
